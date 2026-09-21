@@ -18,11 +18,19 @@ export const portfolioData = {
       isCurrent: true,
       statusBadge: "Present",
       description: "Develop and maintain responsive, user-friendly websites using HTML, CSS, JavaScript, and WordPress. Troubleshoot technical issues, optimize website performance, and collaborate with the team to deliver projects on time.",
+      technicalOwnership: [
+        "Develop, architect, and maintain responsive web systems and custom WordPress platforms using HTML, CSS, JavaScript, and performance-tuned asset pipelines.",
+        "Troubleshoot technical issues, execute diagnostic debugging, and optimize site vitals to guarantee sub-second load times and cross-browser resilience."
+      ],
+      leadershipMentorship: [
+        "Collaborate with cross-functional designers, developers, and project managers to streamline deliverables and hit client milestones on time.",
+        "Mentor teammates on codebase standards, semantic accessibility, and best practices in responsive frontend implementation."
+      ],
       bullets: [
         "Develop and maintain responsive, user-friendly websites using HTML, CSS, JavaScript, and WordPress.",
         "Troubleshoot technical issues, optimize website performance, and collaborate with the team to deliver projects on time."
       ],
-      skills: ["HTML", "CSS", "JavaScript", "WordPress", "Web Performance"]
+      skills: ["HTML", "CSS", "JavaScript", "WordPress", "Web Performance", "Responsive Architecture"]
     },
     {
       title: "E-commerce Coordinator",
@@ -32,10 +40,18 @@ export const portfolioData = {
       isCurrent: false,
       statusBadge: null,
       description: "Managed product listings, optimized SEO content, maintained inventory records, and improved the accuracy and presentation of e-commerce product information.",
+      technicalOwnership: [
+        "Managed digital product architectures, SEO content schemas, database listing accuracy, and e-commerce inventory reconciliation.",
+        "Refined catalog data pipelines and organic search discoverability to maximize customer conversion and listing fidelity."
+      ],
+      leadershipMentorship: [
+        "Coordinated with merchandising teams, commercial vendors, and support staff to synchronize product release calendars.",
+        "Trained junior operations staff on standard digital cataloging protocols and product content QA."
+      ],
       bullets: [
         "Managed product listings, optimized SEO content, maintained inventory records, and improved the accuracy and presentation of e-commerce product information."
       ],
-      skills: ["E-commerce", "SEO Optimization", "Inventory Management"]
+      skills: ["E-commerce", "SEO Optimization", "Inventory Management", "Data Quality"]
     },
     {
       title: "Software Quality Assurance (SQA) Trainee",
@@ -45,11 +61,19 @@ export const portfolioData = {
       isCurrent: false,
       statusBadge: null,
       description: "Performed functional, usability, and regression testing while learning Software Testing Life Cycle (STLC) processes. Gained practical experience in manual testing, test-case preparation, bug identification, and defect reporting.",
+      technicalOwnership: [
+        "Executed manual test cases, functional workflows, and regression test suites adhering to rigorous STLC methodologies.",
+        "Conducted structured edge-case testing, identified critical UI/functional defects, and authored detailed bug reports."
+      ],
+      leadershipMentorship: [
+        "Communicated defect lifecycles and reproduction steps to developer leads in daily standups to expedite sprint remediation.",
+        "Advocated for usability standards and user experience quality gates throughout sprint testing cycles."
+      ],
       bullets: [
         "Performed functional, usability, and regression testing while learning Software Testing Life Cycle (STLC) processes.",
         "Gained practical experience in manual testing, test-case preparation, bug identification, and defect reporting."
       ],
-      skills: ["SQA", "STLC", "Manual Testing", "Bug Reporting", "Test Cases"]
+      skills: ["SQA", "STLC", "Manual Testing", "Bug Reporting", "Test Cases", "Regression Testing"]
     }
   ],
   projects: [

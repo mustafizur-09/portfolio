@@ -2,7 +2,7 @@
 
 import { portfolioData } from "@/data/portfolioData";
 import { motion, Variants } from "framer-motion";
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin, Calendar, Code, Users } from "lucide-react";
 import SpotlightCard from "@/components/SpotlightCard";
 
 export default function Experience() {
@@ -102,17 +102,76 @@ export default function Experience() {
                     </span>
                   </div>
 
-                  {/* Bullet Points with readable text-base sm:text-lg text-zinc-300 */}
-                  <ul className="space-y-3 mb-6">
-                    {exp.bullets.map((bullet, bIndex) => (
-                      <li key={bIndex} className="flex items-start gap-3">
-                        <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-orange-500 shadow-[0_0_6px_rgba(249,115,22,0.8)] shrink-0"></span>
-                        <span className="text-base sm:text-lg text-zinc-300 leading-relaxed font-normal">
-                          {bullet}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Dual Responsibilities: Technical Ownership & Leadership/Mentorship */}
+                  <div className="space-y-4 mb-6">
+                    {/* Technical Ownership */}
+                    {exp.technicalOwnership && exp.technicalOwnership.length > 0 ? (
+                      <div className="bg-zinc-950/50 border border-orange-500/20 rounded-2xl p-4 sm:p-5">
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="p-1 rounded-lg bg-orange-500/15 border border-orange-500/30 text-orange-400">
+                            <Code className="w-4 h-4" />
+                          </span>
+                          <h5 className="text-sm sm:text-base font-bold text-orange-300 tracking-wide">
+                            Technical Ownership
+                          </h5>
+                          <span className="text-[11px] text-zinc-400 font-mono hidden sm:inline-block">
+                            (Architecture, Performance, Testing)
+                          </span>
+                        </div>
+                        <ul className="space-y-2">
+                          {exp.technicalOwnership.map((bullet, bIndex) => (
+                            <li key={bIndex} className="flex items-start gap-2.5">
+                              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-orange-400 shadow-[0_0_6px_rgba(249,115,22,0.8)] shrink-0"></span>
+                              <span className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
+                                {bullet}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+
+                    {/* Leadership & Mentorship */}
+                    {exp.leadershipMentorship && exp.leadershipMentorship.length > 0 ? (
+                      <div className="bg-zinc-950/50 border border-amber-500/20 rounded-2xl p-4 sm:p-5">
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="p-1 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-300">
+                            <Users className="w-4 h-4" />
+                          </span>
+                          <h5 className="text-sm sm:text-base font-bold text-amber-300 tracking-wide">
+                            Leadership &amp; Mentorship
+                          </h5>
+                          <span className="text-[11px] text-zinc-400 font-mono hidden sm:inline-block">
+                            (Team Delivery, Cross-Functional Alignment)
+                          </span>
+                        </div>
+                        <ul className="space-y-2">
+                          {exp.leadershipMentorship.map((bullet, bIndex) => (
+                            <li key={bIndex} className="flex items-start gap-2.5">
+                              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(245,158,11,0.8)] shrink-0"></span>
+                              <span className="text-sm sm:text-base text-zinc-300 leading-relaxed font-normal">
+                                {bullet}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+
+                    {/* Fallback to standard bullets if dual fields are not set */}
+                    {!exp.technicalOwnership && !exp.leadershipMentorship && exp.bullets && (
+                      <ul className="space-y-3 mb-6">
+                        {exp.bullets.map((bullet, bIndex) => (
+                          <li key={bIndex} className="flex items-start gap-3">
+                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-orange-500 shadow-[0_0_6px_rgba(249,115,22,0.8)] shrink-0"></span>
+                            <span className="text-base sm:text-lg text-zinc-300 leading-relaxed font-normal">
+                              {bullet}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
 
                   {/* Tech Tags */}
                   {exp.skills && exp.skills.length > 0 && (

@@ -46,9 +46,14 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          {/* Label */}
-          <motion.div variants={itemVariants} className="text-sm font-bold tracking-[0.2em] text-amber-300 uppercase flex items-center gap-2 drop-shadow-sm">
-            <span>⚡ INTRODUCTION</span>
+          {/* Dual-Focus Accent Badges */}
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/20 border border-orange-500/40 text-orange-300 text-xs sm:text-sm font-bold tracking-wide shadow-[0_0_20px_rgba(249,115,22,0.25)] backdrop-blur-md">
+              <span>⚡</span> Full-Stack &amp; ML Engineer
+            </div>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs sm:text-sm font-bold tracking-wide shadow-[0_0_20px_rgba(245,158,11,0.25)] backdrop-blur-md">
+              <span>🌟</span> Tech Community Leader
+            </div>
           </motion.div>
 
           {/* Large Headline */}
@@ -70,16 +75,46 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Stat Counters */}
-          <motion.div variants={itemVariants} className="flex items-center gap-8 pt-2">
-            <div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-sm">2+</div>
-              <div className="text-xs sm:text-sm font-semibold tracking-wider text-zinc-200/90 uppercase mt-1">Research Papers</div>
+          {/* 4 Dynamic Stat Metrics */}
+          <motion.div variants={itemVariants} className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2">
+            <div className="bg-zinc-950/50 backdrop-blur-md border border-orange-500/20 rounded-2xl p-3.5 sm:p-4 hover:border-orange-500/40 transition-colors shadow-lg">
+              <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-sm flex items-baseline gap-1">
+                <span>4+</span>
+                <span className="text-xs text-orange-400 font-bold">Systems</span>
+              </div>
+              <div className="text-xs text-zinc-300 font-medium mt-1 leading-snug">
+                Production Systems Built
+              </div>
             </div>
-            <div className="w-px h-14 bg-white/20"></div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-sm">4+</div>
-              <div className="text-xs sm:text-sm font-semibold tracking-wider text-zinc-200/90 uppercase mt-1">Key Projects</div>
+
+            <div className="bg-zinc-950/50 backdrop-blur-md border border-orange-500/20 rounded-2xl p-3.5 sm:p-4 hover:border-orange-500/40 transition-colors shadow-lg">
+              <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-sm flex items-baseline gap-1">
+                <span>2+</span>
+                <span className="text-xs text-orange-400 font-bold">Papers</span>
+              </div>
+              <div className="text-xs text-zinc-300 font-medium mt-1 leading-snug">
+                AI Research Papers
+              </div>
+            </div>
+
+            <div className="bg-zinc-950/50 backdrop-blur-md border border-amber-500/20 rounded-2xl p-3.5 sm:p-4 hover:border-amber-500/40 transition-colors shadow-lg">
+              <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-sm flex items-baseline gap-1">
+                <span>500+</span>
+                <span className="text-xs text-amber-400 font-bold">People</span>
+              </div>
+              <div className="text-xs text-zinc-300 font-medium mt-1 leading-snug">
+                Community Members &amp; Students Impacted
+              </div>
+            </div>
+
+            <div className="bg-zinc-950/50 backdrop-blur-md border border-amber-500/20 rounded-2xl p-3.5 sm:p-4 hover:border-amber-500/40 transition-colors shadow-lg">
+              <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-sm flex items-baseline gap-1">
+                <span>3+</span>
+                <span className="text-xs text-amber-400 font-bold">Events</span>
+              </div>
+              <div className="text-xs text-zinc-300 font-medium mt-1 leading-snug">
+                Tech Events &amp; Hackathons Spearheaded
+              </div>
             </div>
           </motion.div>
           
