@@ -70,25 +70,25 @@ export default function LeadershipSection() {
             <div key={org.id}>
               {/* Organization Header */}
               <motion.div variants={itemVariants} className="flex items-start gap-4 sm:gap-5 mb-8">
-                {/* Rounded Club Logo Badge */}
-                <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center p-1.5 shrink-0 shadow-md group">
+                {/* Rounded Club Logo Badge - Enlarged with High-Contrast White Base */}
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-white p-2 sm:p-2.5 shadow-md shadow-black/40 ring-1 ring-zinc-700/60 flex items-center justify-center shrink-0 group">
                   {org.logo ? (
                     <Image
                       src={org.logo}
                       alt={org.name}
-                      width={48}
-                      height={48}
-                      className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   ) : (
-                    <Building2 className="w-6 h-6 text-orange-400" />
+                    <Building2 className="w-8 h-8 text-zinc-800" />
                   )}
                 </div>
 
                 {/* Organization Title, Tenure, & Location */}
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 pt-0.5 sm:pt-1">
                   <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-                    <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight">
                       {org.name}
                     </h3>
                     <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-orange-500/15 border border-orange-500/30 text-orange-400 shrink-0">
@@ -109,7 +109,7 @@ export default function LeadershipSection() {
                   </div>
 
                   {org.description && (
-                    <p className="text-xs sm:text-sm text-zinc-400 mt-2 line-clamp-2">
+                    <p className="text-xs sm:text-sm text-zinc-300/90 mt-2 leading-relaxed">
                       {org.description}
                     </p>
                   )}
@@ -117,7 +117,7 @@ export default function LeadershipSection() {
               </motion.div>
 
               {/* Nested LinkedIn-style Promotional Timeline Track */}
-              <div className="relative pl-7 sm:pl-9 ml-2.5 sm:ml-3">
+              <div className="relative pl-7 sm:pl-9 ml-5 sm:ml-7">
                 {/* Continuous Vertical Connecting Line */}
                 <motion.div
                   variants={lineVariants}
