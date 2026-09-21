@@ -140,7 +140,7 @@ export const portfolioData = {
       name: "BAUET Welfare Club",
       totalTenure: "4 yrs",
       location: "Nator, Rajshahi, Bangladesh",
-      logo: "/images/bauet-welfare-club-logo.png",
+      logo: "/images/bauet-welfare-club.png",
       description: "Student-run social welfare and leadership initiative dedicated to community upliftment, charity drives, and institutional representation.",
       roles: [
         {
@@ -171,7 +171,7 @@ export const portfolioData = {
       name: "BAUET Computer Society",
       totalTenure: "3 yrs 6 mos",
       location: "Nator, Rajshahi, Bangladesh",
-      logo: "/images/bauet-computer-society-logo.png",
+      logo: "/images/bauet-computer-society.png",
       description: "The flagship departmental computing community at BAUET fostering competitive programming, hackathons, and software engineering development.",
       roles: [
         {

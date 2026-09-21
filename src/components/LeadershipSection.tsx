@@ -71,14 +71,18 @@ export default function LeadershipSection() {
               {/* Organization Header */}
               <motion.div variants={itemVariants} className="flex items-start gap-4 sm:gap-5 mb-8">
                 {/* Rounded Club Logo Badge */}
-                <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-800/90 p-1.5 shrink-0 shadow-lg group">
-                  <Image
-                    src={org.logo}
-                    alt={`${org.name} Logo`}
-                    fill
-                    sizes="64px"
-                    className="object-contain p-1 transition-transform duration-300 group-hover:scale-105"
-                  />
+                <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center p-1.5 shrink-0 shadow-md group">
+                  {org.logo ? (
+                    <Image
+                      src={org.logo}
+                      alt={org.name}
+                      width={48}
+                      height={48}
+                      className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <Building2 className="w-6 h-6 text-orange-400" />
+                  )}
                 </div>
 
                 {/* Organization Title, Tenure, & Location */}
