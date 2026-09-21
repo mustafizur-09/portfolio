@@ -79,24 +79,27 @@ export const portfolioData = {
   projects: [
     {
       title: "Medical Action Recognition",
-      description: "Research focused on utilizing machine learning techniques to recognize and classify medical actions, aiming to improve healthcare automation.",
-      tags: ["Python", "ST-GCN", "Machine Learning"],
-      githubLink: "#",
-      demoLink: "#"
+      description: "Clinical tracking and Spatio-Temporal Graph CNN (ST-GCN) posture detection pipeline leveraging skeletal kinematics to classify patient movements and support healthcare automation.",
+      image: "/images/medical-action.png",
+      tags: ["Python", "ST-GCN", "PyTorch", "Computer Vision"],
+      githubLink: "https://github.com/mustafizur-09",
+      demoLink: "/gallery"
     },
     {
       title: "Leaf Disease CNN",
-      description: "A deep learning model utilizing Convolutional Neural Networks (CNN) to detect and classify leaf diseases in plants.",
+      description: "Multi-leaf plant pathology diagnostic vision model trained on plant canopy datasets with Grad-CAM heatmap explainability to identify crop infections in early stages.",
+      image: "/images/leaf-disease.png",
       tags: ["Python", "TensorFlow", "Keras", "OpenCV"],
-      githubLink: "#",
-      demoLink: "#"
+      githubLink: "https://github.com/mustafizur-09",
+      demoLink: "/gallery"
     },
     {
       title: "Web Systems Architecture",
-      description: "A comprehensive e-commerce backend built with scalable microservices architecture.",
-      tags: ["Next.js", "Node.js", "MongoDB", "Express"],
-      githubLink: "#",
-      demoLink: "#"
+      description: "Production web systems architecture featuring microservices system flow, sub-second response times, and optimized multi-tier asset delivery pipelines.",
+      image: "/images/web-architecture.png",
+      tags: ["Next.js", "Node.js", "WordPress", "Web Performance"],
+      githubLink: "https://github.com/mustafizur-09",
+      demoLink: "/#experience"
     }
   ],
   education: [

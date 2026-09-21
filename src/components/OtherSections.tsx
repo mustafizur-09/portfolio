@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { portfolioData } from "@/data/portfolioData";
 import { motion, Variants } from "framer-motion";
 
@@ -36,25 +37,42 @@ export default function OtherSections() {
                   key={index} 
                   variants={itemVariants}
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                  className="bg-zinc-900/60 backdrop-blur-md p-6 rounded-3xl border border-zinc-800/80 hover:border-zinc-600 transition-colors duration-300 hover:shadow-[0_0_30px_rgba(234,88,12,0.15)] group flex flex-col h-full relative overflow-hidden"
+                  className="bg-zinc-900/60 backdrop-blur-md p-6 rounded-3xl border border-zinc-800/80 hover:border-orange-500/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] group flex flex-col h-full relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-orange-500/0 group-hover:from-orange-500/5 group-hover:to-orange-500/5 transition-colors duration-500 pointer-events-none"></div>
                   
-                  <div className="relative z-10 flex-1">
-                    {/* Mockup Frame placeholder */}
-                    <div className="bg-[#0a0a0c] border border-zinc-800/60 rounded-2xl mb-6 p-4 h-36 flex flex-col items-center justify-center relative overflow-hidden group-hover:border-orange-500/30 transition-colors shadow-inner">
-                      <div className="absolute top-3 left-3 flex gap-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-zinc-700/50"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-zinc-700/50"></div>
-                        <div className="w-2.5 h-2.5 rounded-full bg-zinc-700/50"></div>
+                  <div className="relative z-10 flex-1 flex flex-col">
+                    {/* Media Container with macOS-style 3-dot window pill indicator */}
+                    <div className="relative w-full h-48 rounded-xl overflow-hidden bg-zinc-950 border border-zinc-800/80 mb-6">
+                      {/* macOS-style 3-dot window pill indicator */}
+                      <div className="absolute top-3 left-3 flex gap-1.5 z-10 bg-zinc-950/70 backdrop-blur-md px-2.5 py-1.5 rounded-full border border-zinc-800/80 shadow-md pointer-events-none">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
                       </div>
-                      <div className="text-zinc-600/50 font-mono text-xs uppercase tracking-widest mt-4 group-hover:text-orange-500/30 transition-colors">
-                        Preview Unavailable
-                      </div>
+
+                      {/* Subtle gradient overlay for contrast */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-transparent to-zinc-950/30 z-[5] pointer-events-none"></div>
+
+                      {/* Next.js Image with transition-transform duration-500 group-hover:scale-105 */}
+                      {project.image ? (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          priority={index === 0}
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-zinc-900 text-zinc-600 font-mono text-xs uppercase tracking-widest">
+                          Preview Diagram
+                        </div>
+                      )}
                     </div>
 
                     <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">{project.title}</h3>
-                    <p className="text-base sm:text-lg text-zinc-300 my-4 leading-relaxed">{project.description}</p>
+                    <p className="text-base sm:text-lg text-zinc-300 my-4 leading-relaxed flex-1">{project.description}</p>
                     {project.tags && (
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.tags.map((tag: string, tIndex: number) => (
