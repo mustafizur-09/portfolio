@@ -27,8 +27,8 @@ export const galleryItems: GalleryItem[] = [
     description: "Spearheaded campus developer initiatives, organized inter-departmental coding hackathons, directed technical workshops, and mentored 15+ core student developers in algorithmic problem-solving and full-stack software development.",
     tags: ["Tech Community Leadership", "Campus Hackathons", "Team Mentorship", "Event Organization", "Algorithmic Workshops"],
     stats: "500+ Students Impacted",
-    link: "/about#leadership",
-    demoUrl: "/about#leadership",
+    link: "/leadership",
+    demoUrl: "/leadership",
     repoUrl: "https://github.com/mustafizur-09",
     isFeatured: true,
     metrics: [

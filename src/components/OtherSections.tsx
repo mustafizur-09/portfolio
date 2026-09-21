@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { portfolioData } from "@/data/portfolioData";
 import { motion, Variants } from "framer-motion";
-import LeadershipSection from "@/components/LeadershipSection";
 
 export default function OtherSections() {
   const containerVariants: Variants = {
@@ -118,11 +117,6 @@ export default function OtherSections() {
             </div>
           </motion.div>
         )}
-
-        {/* Leadership & Community LinkedIn-Style Nested Timeline */}
-        <div id="leadership">
-          <LeadershipSection />
-        </div>
 
         {/* 2-Column Layout for Publications & Education + Skills */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">

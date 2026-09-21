@@ -22,6 +22,11 @@ export default function Header() {
       return;
     }
 
+    if (pathname === "/leadership") {
+      setActiveNav("Leadership");
+      return;
+    }
+
     // Scroll spy for homepage
     if (pathname === "/") {
       const handleScroll = () => {
@@ -53,6 +58,7 @@ export default function Header() {
     { name: "About", href: "/about" },
     { name: "Experience", href: "/#experience" },
     { name: "Professional Gallery", href: "/gallery" },
+    { name: "Leadership", href: "/leadership" },
   ];
 
   return (

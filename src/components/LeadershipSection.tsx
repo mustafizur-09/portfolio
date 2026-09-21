@@ -3,9 +3,11 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { MapPin, Calendar, Award, Sparkles, Building2 } from "lucide-react";
+import { leadershipOrganizations as defaultLeadershipOrgs } from "@/data/leadershipData";
 import { portfolioData } from "@/data/portfolioData";
 
 export default function LeadershipSection() {
+  const organizations = defaultLeadershipOrgs || portfolioData.leadershipOrganizations || [];
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,7 +67,7 @@ export default function LeadershipSection() {
         {/* Subtle Ambient Background Gradient Glow */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-orange-500/10 via-amber-500/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
 
-        {portfolioData.leadershipOrganizations.map((org, orgIndex) => {
+        {organizations.map((org, orgIndex) => {
           return (
             <div key={org.id}>
               {/* Organization Header */}
@@ -184,7 +186,7 @@ export default function LeadershipSection() {
               </div>
 
               {/* Clean Horizontal Border between the two organizations */}
-              {orgIndex < portfolioData.leadershipOrganizations.length - 1 && (
+              {orgIndex < organizations.length - 1 && (
                 <div className="my-8 sm:my-10 border-t border-zinc-800/80" />
               )}
             </div>
