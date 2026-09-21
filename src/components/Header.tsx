@@ -17,6 +17,11 @@ export default function Header() {
       return;
     }
 
+    if (pathname === "/gallery") {
+      setActiveNav("Professional Gallery");
+      return;
+    }
+
     // Scroll spy for homepage
     if (pathname === "/") {
       const handleScroll = () => {
@@ -47,6 +52,7 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Experience", href: "/#experience" },
+    { name: "Professional Gallery", href: "/gallery" },
   ];
 
   return (
@@ -56,15 +62,15 @@ export default function Header() {
           {/* Brand Logo / Title */}
           <Link
             href="/"
-            className="text-xl sm:text-2xl font-bold text-zinc-900 tracking-tight flex items-center gap-1 group transition-transform hover:scale-[1.02]"
+            className="text-xl sm:text-2xl font-bold text-zinc-900 tracking-tight flex items-center gap-1 group transition-transform hover:scale-[1.02] shrink-0"
           >
             <span>Mustafizur&apos;s Profile</span>
             <span className="text-orange-600 group-hover:scale-125 transition-transform duration-300">.</span>
           </Link>
 
-          {/* Desktop: Modern Floating Capsule / Pill Nav Links */}
+          {/* Desktop & Tablet: Modern Floating Capsule / Pill Nav Links */}
           <div className="hidden md:flex items-center">
-            <div className="bg-white/95 border border-neutral-200 shadow-sm p-1.5 rounded-full flex items-center gap-1 backdrop-blur-md">
+            <div className="bg-white/95 border border-neutral-200 shadow-sm p-1.5 rounded-full flex items-center gap-0.5 lg:gap-1 backdrop-blur-md">
               {navLinks.map((link) => {
                 const isActive = activeNav === link.name;
                 return (
@@ -72,7 +78,7 @@ export default function Header() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setActiveNav(link.name)}
-                    className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all duration-200 flex items-center gap-1.5 ${
+                    className={`relative px-3 lg:px-4 py-2 text-xs lg:text-sm font-semibold rounded-full transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap ${
                       isActive
                         ? "text-zinc-950 font-bold"
                         : "text-zinc-800 hover:text-zinc-950 hover:bg-neutral-200/80"
@@ -87,7 +93,7 @@ export default function Header() {
                     )}
                     <span>{link.name}</span>
                     {isActive && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
                     )}
                   </Link>
                 );
@@ -97,7 +103,7 @@ export default function Header() {
               <Link
                 href="/#contact"
                 onClick={() => setActiveNav("Contact")}
-                className="ml-1 bg-gradient-to-r from-orange-500 to-amber-600 text-white font-medium px-5 py-2 rounded-full shadow-md shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 active:scale-95 transition-all text-sm flex items-center gap-1.5"
+                className="ml-1 bg-gradient-to-r from-orange-500 to-amber-600 text-white font-medium px-4 lg:px-5 py-2 rounded-full shadow-md shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 active:scale-95 transition-all text-xs lg:text-sm flex items-center gap-1.5 shrink-0 whitespace-nowrap"
               >
                 <span>Contact</span>
                 <span className="text-orange-100 text-xs">⚡</span>

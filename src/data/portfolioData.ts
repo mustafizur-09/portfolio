@@ -13,16 +13,43 @@ export const portfolioData = {
     {
       title: "Software Engineer",
       company: "Ontek Horizon",
-      duration: "Present",
-      description: "Developing robust and scalable web applications, collaborating with cross-functional teams to deliver high-quality software solutions.",
-      skills: ["Web Development", "Software Engineering", "Team Collaboration"]
+      location: "Rajshahi, Bangladesh",
+      duration: "August 2026 – Present",
+      isCurrent: true,
+      statusBadge: "Present",
+      description: "Develop and maintain responsive, user-friendly websites using HTML, CSS, JavaScript, and WordPress. Troubleshoot technical issues, optimize website performance, and collaborate with the team to deliver projects on time.",
+      bullets: [
+        "Develop and maintain responsive, user-friendly websites using HTML, CSS, JavaScript, and WordPress.",
+        "Troubleshoot technical issues, optimize website performance, and collaborate with the team to deliver projects on time."
+      ],
+      skills: ["HTML", "CSS", "JavaScript", "WordPress", "Web Performance"]
     },
     {
-      title: "Software Quality Assurance (SQA)",
+      title: "E-commerce Coordinator",
+      company: "Ontek Horizon",
+      location: "Rajshahi, Bangladesh",
+      duration: "June – July 2026",
+      isCurrent: false,
+      statusBadge: null,
+      description: "Managed product listings, optimized SEO content, maintained inventory records, and improved the accuracy and presentation of e-commerce product information.",
+      bullets: [
+        "Managed product listings, optimized SEO content, maintained inventory records, and improved the accuracy and presentation of e-commerce product information."
+      ],
+      skills: ["E-commerce", "SEO Optimization", "Inventory Management"]
+    },
+    {
+      title: "Software Quality Assurance (SQA) Trainee",
       company: "RiseUp Labs",
-      duration: "Previous",
-      description: "Conducted comprehensive manual and automated testing to ensure product quality, identified bugs, and improved overall software reliability.",
-      skills: ["Automated Testing", "Manual Testing", "Quality Assurance", "Bug Tracking"]
+      location: "Uttara, Dhaka",
+      duration: "(January 01 – January 28) 2026",
+      isCurrent: false,
+      statusBadge: null,
+      description: "Performed functional, usability, and regression testing while learning Software Testing Life Cycle (STLC) processes. Gained practical experience in manual testing, test-case preparation, bug identification, and defect reporting.",
+      bullets: [
+        "Performed functional, usability, and regression testing while learning Software Testing Life Cycle (STLC) processes.",
+        "Gained practical experience in manual testing, test-case preparation, bug identification, and defect reporting."
+      ],
+      skills: ["SQA", "STLC", "Manual Testing", "Bug Reporting", "Test Cases"]
     }
   ],
   projects: [

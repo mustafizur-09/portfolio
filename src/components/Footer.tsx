@@ -69,6 +69,7 @@ export default function Footer() {
               <li><Link href="/" className="text-zinc-400 hover:text-orange-400 transition-colors">Home</Link></li>
               <li><Link href="/about" className="text-zinc-400 hover:text-orange-400 transition-colors">About</Link></li>
               <li><Link href="/#experience" className="text-zinc-400 hover:text-orange-400 transition-colors">Experience</Link></li>
+              <li><Link href="/gallery" className="text-zinc-400 hover:text-orange-400 transition-colors">Professional Gallery</Link></li>
               <li><Link href="/#more" className="text-zinc-400 hover:text-orange-400 transition-colors">Projects & Research</Link></li>
               <li><Link href="/#contact" className="text-zinc-400 hover:text-orange-400 transition-colors">Contact</Link></li>
             </ul>
