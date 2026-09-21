@@ -13,6 +13,18 @@ export interface GalleryItem {
 
 export const galleryItems: GalleryItem[] = [
   {
+    id: "5",
+    title: "University Tech Club Leadership & Campus Hackathons",
+    category: "leadership",
+    categoryLabel: "# Leadership",
+    date: "2021 - 2022",
+    image: "/gallery/hackathon-lead.jpg",
+    description: "Led student developer teams, hosted university-level coding competitions, coordinated algorithmic problem-solving workshops, and mentored junior programmers.",
+    tags: ["Team Leadership", "Mentorship", "Community", "Workshops"],
+    stats: "15+ Members Led",
+    link: "/#more",
+  },
+  {
     id: "1",
     title: "Full-Stack Web Architecture & Performance Optimization",
     category: "engineering",
@@ -59,18 +71,6 @@ export const galleryItems: GalleryItem[] = [
     tags: ["SQA", "Regression Testing", "STLC", "Bug Tracking"],
     stats: "Zero-defect QA",
     link: "/#experience",
-  },
-  {
-    id: "5",
-    title: "University Tech Club Leadership & Campus Hackathons",
-    category: "leadership",
-    categoryLabel: "# Leadership",
-    date: "2021 - 2022",
-    image: "/gallery/hackathon-lead.jpg",
-    description: "Led student developer teams, hosted university-level coding competitions, coordinated algorithmic problem-solving workshops, and mentored junior programmers.",
-    tags: ["Team Leadership", "Mentorship", "Community", "Workshops"],
-    stats: "15+ Members Led",
-    link: "/#more",
   },
   {
     id: "6",

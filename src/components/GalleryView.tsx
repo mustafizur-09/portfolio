@@ -8,13 +8,13 @@ import { Sparkles, Calendar } from "lucide-react";
 import { galleryItems, GalleryItem } from "@/data/galleryData";
 
 export default function GalleryView() {
-  const [selectedFilter, setSelectedFilter] = useState<string>("all");
+  const [selectedFilter, setSelectedFilter] = useState<string>("leadership");
 
   const filterTabs = [
     { id: "all", label: "All Works" },
+    { id: "leadership", label: "Leadership & Community" },
     { id: "engineering", label: "Engineering & Web" },
     { id: "research", label: "AI & Research" },
-    { id: "leadership", label: "Leadership & Community" },
     { id: "certifications", label: "Certifications" },
   ];
 
@@ -86,7 +86,7 @@ export default function GalleryView() {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  priority={item.id === "1" || item.id === "2"}
+                  priority={item.id === "5" || item.id === "1"}
                 />
 
                 {/* Subtle dark gradient overlay for tag contrast */}
