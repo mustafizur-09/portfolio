@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { portfolioData } from "@/data/portfolioData";
 import { motion, Variants } from "framer-motion";
+import LeadershipSection from "@/components/LeadershipSection";
 
 export default function OtherSections() {
   const containerVariants: Variants = {
@@ -118,30 +119,15 @@ export default function OtherSections() {
           </motion.div>
         )}
 
-        {/* 2-Column Layout for the rest */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {/* Left Column: Leadership & Publications */}
-          <div className="space-y-12">
-            {/* Leadership */}
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-            >
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-8 border-b border-zinc-800 pb-4 inline-block">Leadership</h2>
-              <div className="space-y-8">
-                {portfolioData.leadership.map((lead, index) => (
-                  <motion.div key={index} variants={itemVariants} className="bg-zinc-900/60 backdrop-blur-md p-6 rounded-3xl border border-zinc-800/80 hover:border-zinc-600 transition-colors">
-                    <h3 className="text-lg sm:text-xl font-bold text-white">{lead.role}</h3>
-                    <div className="text-sm sm:text-base text-orange-400 font-medium mb-1.5 mt-1">{lead.organization}</div>
-                    <div className="text-xs sm:text-sm text-zinc-400 mb-3 uppercase tracking-wider font-semibold">{lead.duration}</div>
-                    <p className="text-base sm:text-lg text-zinc-300 leading-relaxed">{lead.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+        {/* Leadership & Community LinkedIn-Style Nested Timeline */}
+        <div id="leadership">
+          <LeadershipSection />
+        </div>
 
+        {/* 2-Column Layout for Publications & Education + Skills */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          {/* Left Column: Publications */}
+          <div className="space-y-12">
             {/* Publications */}
             <motion.div
               variants={containerVariants}
