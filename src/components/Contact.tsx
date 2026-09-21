@@ -39,6 +39,15 @@ export default function Contact() {
     }
 
     try {
+      console.log("Submitting form to Web3Forms...", {
+        endpoint: "https://api.web3forms.com/submit",
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        hasKey: Boolean(accessKey),
+      });
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -55,7 +64,10 @@ export default function Contact() {
         }),
       });
 
+      console.log("Web3Forms Response Status Code:", response.status);
+
       const result = await response.json();
+      console.log("Web3Forms Response Data:", result);
 
       if (result.success) {
         setStatus("success");
@@ -70,6 +82,7 @@ export default function Contact() {
         setErrorMessage(result.message || "Failed to send message. Please try again.");
       }
     } catch (err: unknown) {
+      console.error("Web3Forms Submission Exception:", err);
       setStatus("error");
       setErrorMessage(
         err instanceof Error
