@@ -3,6 +3,7 @@
 import { portfolioData } from "@/data/portfolioData";
 import { motion, Variants } from "framer-motion";
 import { MapPin, Calendar } from "lucide-react";
+import SpotlightCard from "@/components/SpotlightCard";
 
 export default function Experience() {
   const containerVariants: Variants = {
@@ -61,11 +62,8 @@ export default function Experience() {
                 )}
               </div>
 
-              {/* Modern Card Container with Subtle Border & Dark Background */}
-              <div className="bg-zinc-900/60 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-zinc-800 hover:border-zinc-700 group-hover:border-orange-500/40 transition-all duration-300 hover:shadow-[0_0_35px_rgba(234,88,12,0.14)] hover:-translate-y-0.5 relative overflow-hidden">
-                {/* Sunset-orange ambient hover glow */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-orange-500/10 via-amber-500/5 to-transparent rounded-full blur-2xl pointer-events-none opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
-
+              {/* Modern Card Container with 3D Tilt & Mouse Spotlight Glow */}
+              <SpotlightCard className="bg-zinc-900/60 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-zinc-800 hover:border-zinc-700 shadow-xl hover:shadow-[0_0_35px_rgba(234,88,12,0.18)]">
                 <div className="relative z-10">
                   {/* Top Row: Role Title & Status Badge */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
@@ -132,7 +130,7 @@ export default function Experience() {
                     </div>
                   )}
                 </div>
-              </div>
+              </SpotlightCard>
             </motion.div>
           ))}
         </motion.div>
