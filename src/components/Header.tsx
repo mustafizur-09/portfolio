@@ -84,11 +84,10 @@ export default function Header() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setActiveNav(link.name)}
-                    className={`relative px-3 lg:px-4 py-2 text-xs lg:text-sm font-semibold rounded-full transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap ${
-                      isActive
-                        ? "text-zinc-950 font-bold"
-                        : "text-zinc-800 hover:text-zinc-950 hover:bg-neutral-200/80"
-                    }`}
+                    className={`relative px-3 lg:px-4 py-2 text-xs lg:text-sm font-semibold rounded-full transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap ${isActive
+                      ? "text-zinc-950 font-bold"
+                      : "text-zinc-800 hover:text-zinc-950 hover:bg-neutral-200/80"
+                      }`}
                   >
                     {isActive && (
                       <motion.div
@@ -160,11 +159,10 @@ export default function Header() {
                   setActiveNav(link.name);
                   setMobileMenuOpen(false);
                 }}
-                className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
-                  activeNav === link.name
-                    ? "bg-neutral-200/90 text-zinc-950"
-                    : "text-zinc-800 hover:text-orange-600 hover:bg-neutral-200/50"
-                }`}
+                className={`block px-4 py-3 rounded-xl text-base font-semibold transition-colors ${activeNav === link.name
+                  ? "bg-neutral-200/90 text-zinc-950"
+                  : "text-zinc-800 hover:text-orange-600 hover:bg-neutral-200/50"
+                  }`}
               >
                 {link.name}
               </Link>

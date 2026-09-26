@@ -57,8 +57,9 @@ export default function Hero() {
           </motion.div>
 
           {/* Large Headline */}
-          <motion.h1 variants={itemVariants} className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white drop-shadow-md">
-            Building the web & models that carry <span className="font-elegant text-amber-200 font-normal pr-2 drop-shadow">real</span> solutions.
+          <motion.h1 variants={itemVariants} className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-snug sm:leading-tight text-white drop-shadow-md max-w-2xl sm:max-w-3xl">
+            Engineering intelligent web systems and scalable AI solutions for{" "}
+            <span className="font-elegant italic font-serif text-amber-200 font-normal pr-1.5 drop-shadow">real-world</span> impact.
           </motion.h1>
           
           {/* Subtext */}

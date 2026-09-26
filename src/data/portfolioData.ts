@@ -1,7 +1,7 @@
 export const portfolioData = {
   hero: {
     name: "Md Mustafizur Rahman",
-    headline: "Building the web & models that carry real solutions.",
+    headline: "Engineering intelligent web systems and scalable AI solutions for real-world impact.",
     description: "Md. Mustafizur Rahman — CSE graduate, Software Engineer & ML researcher building robust digital applications and computer vision systems.",
     socials: {
       github: "https://github.com/mustafizur-09",

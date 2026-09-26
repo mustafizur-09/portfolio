@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Calendar } from "lucide-react";
+import { Mail, MapPin, Calendar, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
