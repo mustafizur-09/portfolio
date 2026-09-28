@@ -101,6 +101,12 @@ export default function Footer() {
                   mustafijurrahman40496@gmail.com
                 </a>
               </div>
+              <div className="flex items-center gap-3 text-zinc-400">
+                <Phone className="w-5 h-5 text-orange-400 shrink-0" />
+                <a href="tel:+8801743885646" className="text-zinc-400 hover:text-orange-400 transition-colors">
+                  01743885646
+                </a>
+              </div>
             </div>
             <motion.a 
               whileHover={{ scale: 1.05 }}

@@ -110,11 +110,11 @@ export default function Hero() {
 
             <div className="bg-zinc-950/50 backdrop-blur-md border border-amber-500/20 rounded-2xl p-3.5 sm:p-4 hover:border-amber-500/40 transition-colors shadow-lg">
               <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight drop-shadow-sm flex items-baseline gap-1">
-                <span>3+</span>
-                <span className="text-xs text-amber-400 font-bold">Events</span>
+                <span>10+</span>
+                <span className="text-xs text-amber-400 font-bold">Tech Events</span>
               </div>
               <div className="text-xs text-zinc-300 font-medium mt-1 leading-snug">
-                Tech Events &amp; Hackathons Spearheaded
+                Tech Events &amp; 20+ Welfare Events Organized
               </div>
             </div>
           </motion.div>

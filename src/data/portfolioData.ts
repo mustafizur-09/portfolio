@@ -78,6 +78,14 @@ export const portfolioData = {
   ],
   projects: [
     {
+      title: "Ontek Company Website",
+      description: "Company website project built to present the organization, its services, and digital presence through a polished web experience.",
+      image: "/images/Ontek-logo-removebg-preview.png",
+      tags: ["Company Website", "Web Development"],
+      githubLink: "https://github.com/mustafizur-09/ontek-new-project",
+      demoLink: "#"
+    },
+    {
       title: "Medical Action Recognition",
       description: "Clinical tracking and Spatio-Temporal Graph CNN (ST-GCN) posture detection pipeline leveraging skeletal kinematics to classify patient movements and support healthcare automation.",
       image: "/images/medical-action.png",

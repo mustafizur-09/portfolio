@@ -70,7 +70,7 @@ export default function Header() {
             href="/"
             className="text-xl sm:text-2xl font-bold text-zinc-900 tracking-tight flex items-center gap-1 group transition-transform hover:scale-[1.02] shrink-0"
           >
-            <span>Mustafizur&apos;s Profile</span>
+            <span>Mustafizur | Software Engineer</span>
             <span className="text-orange-600 group-hover:scale-125 transition-transform duration-300">.</span>
           </Link>
 
